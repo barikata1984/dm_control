@@ -435,7 +435,7 @@ class BaseAsset:
       if raw_length > constants.MAX_VFS_FILENAME_LENGTH:
         trim_amount = raw_length - constants.MAX_VFS_FILENAME_LENGTH
         prefix = prefix[:-trim_amount]
-      filename = '-'.join([prefix, hash_string])
+      filename = prefix  # '-'.join([prefix, hash_string])
     else:
       filename = hash_string
 
